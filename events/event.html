@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Your Event</title>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+  <style>
+    /* Custom styles for the event form */
+    body {
+      font-family:'Times New Roman', Times, serif;
+      background-color: #06173d; /* Light gray background */
+      color: #333; /* Dark text color */
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #ffffff; /* White background */
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #4a90e2; /* Blue header color */
+    }
+
+    label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #4a90e2; /* Blue label color */
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd; /* Light gray border */
+      border-radius: 5px;
+      background-color: #f9fafb; /* Light gray background */
+      color: #333; /* Dark text color */
+      font-size: 1rem;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    input[type="time"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #4a90e2; /* Blue focus border color */
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 15px;
+      margin-top: 20px;
+      background-color: #4a90e2; /* Blue button background */
+      color: #ffffff; /* White text color */
+      border: none;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #3579b3; /* Darker blue on hover */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <form class="max-w-md mx-auto mt-10" id="event_form">
+      <h1>Add Your Event</h1>
+      <div class="mb-5">
+        <label for="user_avatar">Upload Event Image</label>
+        <input type="file" id="user_avatar" class="block w-full py-2.5 px-4 text-sm rounded-lg cursor-pointer bg-gray-200 border border-gray-300 focus:outline-none focus:border-blue-500 transition-colors duration-300 ease-in-out"
+          aria-describedby="user_avatar_help" required>
+      </div>
+      <div class="mb-5">
+        <label for="floating_password">Event Title</label>
+        <input type="text" name="title" id="floating_password" placeholder="Enter event title" class="block w-full py-2.5 px-4 text-sm rounded-lg border-gray-300 bg-gray-200 focus:outline-none focus:border-blue-500 transition-colors duration-300 ease-in-out"
+          required>
+      </div>
+      <div class="mb-5">
+        <label for="event_desc">Description</label>
+        <textarea id="event_desc" name="Description" placeholder="Enter event description" rows="4" class="block w-full py-2.5 px-4 text-sm rounded-lg border-gray-300 bg-gray-200 focus:outline-none focus:border-blue-500 transition-colors duration-300 ease-in-out"
+          required></textarea>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="mb-5">
+          <label for="Location">Location</label>
+          <input type="text" name="Location" id="Location" placeholder="Enter event location" class="block w-full py-2.5 px-4 text-sm rounded-lg border-gray-300 bg-gray-200 focus:outline-none focus:border-blue-500 transition-colors duration-300 ease-in-out"
+            required>
+        </div>
+        <div class="mb-5">
+          <label for="date">Date</label>
+          <input type="date" name="date" id="date" class="block w-full py-2.5 px-4 text-sm rounded-lg border-gray-300 bg-gray-200 focus:outline-none focus:border-blue-500 transition-colors duration-300 ease-in-out"
+            required>
+        </div>
+        <div class="mb-5">
+          <label for="time">Time</label>
+          <input type="time" name="time" id="time" class="block w-full py-2.5 px-4 text-sm rounded-lg border-gray-300 bg-gray-200 focus:outline-none focus:border-blue-500 transition-colors duration-300 ease-in-out"
+            required>
+        </div>
+      </div>
+      <button type="submit">Add Event</button>
+    </form>
+  </div>
+
+</body>
+<script src="./event.js" type="module"></script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Planner</title>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css">
+  <style>
+body {
+      font-family:'Times New Roman', Times, serif;
+      background-color: #020f31; /* Light gray background */
+      color: #333333; /* Dark text color */
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="https://flowbite.com/docs/images/logo.svg" alt="Flowbite Logo">
+        <span class="text-2xl font-semibold text-white">Events Planner</span>
+      </a>
+      <div class="flex items-center space-x-6 rtl:space-x-reverse">
+        <a id="create_event_btn" href="./createEvent/event.html" class="text-white hover:text-blue-400 transition-colors duration-300 ease-in-out">Create Events</a>
+        <a href="./profile/profile.html" id="user_img">
+          <img class="w-10 h-10 rounded-full"
+            src="https://images.unsplash.com/photo-1486976862325-fbac7b41739b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="User Profile Image">
+        </a>
+        <a id="login_auth" href="./auth/login/login.html"
+          class="text-sm text-blue-600 hover:underline transition-colors duration-300 ease-in-out">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Secondary Navigation -->
+  <nav class="secondary-nav">
+    <div class="container mx-auto px-4 py-2">
+      <ul class="flex items-center space-x-8 text-sm font-medium">
+        <li>
+          <a href="./index.html"
+            class="text-gray-800 dark:text-white hover:text-blue-400 transition-colors duration-300 ease-in-out">Trending
+        </li>
+        <!-- Add more navigation links as needed -->
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content Section -->
+  <div class="container mx-auto py-6 px-4">
+
+    <!-- Event Cards Container -->
+    <div id="events_cards_container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    </div>
+  </div>
+
+  <!-- Logout Button -->
+  <button id="logout_btn"
+    class="logout-btn">Logout</button>
+
+  <!-- JavaScript -->
+  <script src="./app.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+<!-- <a href="./auth/login/login.html"></a> -->
+</body>
+
+</html>
